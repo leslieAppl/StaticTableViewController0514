@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WZt-ow-CJL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vcK-os-rBV">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My TableVC-->
+        <!--Static-->
         <scene sceneID="0yD-YG-QQh">
             <objects>
                 <tableViewController id="WZt-ow-CJL" customClass="MyTableVC" customModule="TableVC0516" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,6 +131,7 @@
                             <outlet property="delegate" destination="WZt-ow-CJL" id="zat-0o-aU1"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Static" image="pencil.circle" catalog="system" id="tRo-nJ-lP9"/>
                     <connections>
                         <outlet property="dateLbl" destination="dki-p6-9qa" id="THl-Ge-qAD"/>
                         <outlet property="imgLbl" destination="oUI-Wu-dHi" id="X3R-9B-YFq"/>
@@ -140,7 +141,79 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGO-4E-FtV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="980" y="743"/>
+        </scene>
+        <!--Groceries-->
+        <scene sceneID="pSe-rJ-hI5">
+            <objects>
+                <tableViewController id="PK1-j4-B1A" customClass="MyTableVC2" customModule="TableVC0516" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8fP-8D-Gd4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="xT7-WE-rka">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xT7-WE-rka" id="ryb-zl-ZTh">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PK1-j4-B1A" id="Kgp-f2-WaW"/>
+                            <outlet property="delegate" destination="PK1-j4-B1A" id="eyU-G7-adC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Groceries" id="bLu-eg-gBI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Yl-7E-CJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2507" y="743"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GXV-N8-4f3">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vcK-os-rBV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wnm-vg-0yb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.59851241440000003" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="WZt-ow-CJL" kind="relationship" relationship="viewControllers" id="4ae-pH-7ih"/>
+                        <segue destination="YnZ-F4-zDt" kind="relationship" relationship="viewControllers" id="bDv-ZD-Adg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFx-fL-fsk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="1366.6666666666667" y="57.589285714285708"/>
         </scene>
+        <!--Search-->
+        <scene sceneID="UOZ-KK-O3V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YnZ-F4-zDt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="pencil.and.outline" catalog="system" id="RJV-Hq-3Sq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="L9y-jl-Xce">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PK1-j4-B1A" kind="relationship" relationship="rootViewController" id="KT0-yL-iE4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z3B-tK-CQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828" y="743"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="pencil.and.outline" catalog="system" width="128" height="119"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
