@@ -15,6 +15,7 @@
 		CE37B041246FC77800914C19 /* MyTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37B040246FC77800914C19 /* MyTableVC.swift */; };
 		CE6F725F24700E09005AFBF5 /* MyTableVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F725E24700E09005AFBF5 /* MyTableVC2.swift */; };
 		CE6F726424700E7C005AFBF5 /* ApplicationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F726324700E7C005AFBF5 /* ApplicationData.swift */; };
+		CE6F726624701EA7005AFBF5 /* MyTableVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F726524701EA7005AFBF5 /* MyTableVC3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		CE37B040246FC77800914C19 /* MyTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableVC.swift; sourceTree = "<group>"; };
 		CE6F725E24700E09005AFBF5 /* MyTableVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableVC2.swift; sourceTree = "<group>"; };
 		CE6F726324700E7C005AFBF5 /* ApplicationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationData.swift; sourceTree = "<group>"; };
+		CE6F726524701EA7005AFBF5 /* MyTableVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableVC3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			children = (
 				CE37B040246FC77800914C19 /* MyTableVC.swift */,
 				CE6F725E24700E09005AFBF5 /* MyTableVC2.swift */,
+				CE6F726524701EA7005AFBF5 /* MyTableVC3.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6F726424700E7C005AFBF5 /* ApplicationData.swift in Sources */,
+				CE6F726624701EA7005AFBF5 /* MyTableVC3.swift in Sources */,
 				CE6F725F24700E09005AFBF5 /* MyTableVC2.swift in Sources */,
 				CE37B02D246FC6D300914C19 /* AppDelegate.swift in Sources */,
 				CE37B02F246FC6D300914C19 /* SceneDelegate.swift in Sources */,

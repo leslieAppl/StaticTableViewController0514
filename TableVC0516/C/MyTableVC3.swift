@@ -1,5 +1,5 @@
 //
-//  MyTableVC2.swift
+//  MyTableVC3.swift
 //  TableVC0516
 //
 //  Created by leslie on 5/16/20.
@@ -8,33 +8,43 @@
 
 import UIKit
 
-class MyTableVC2: UITableViewController {
+class MyTableVC3: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+//MARK: - Search Controller
         let searchController = UISearchController(searchResultsController: nil)
         
         //Allocating self to be the Search Controller's delegate
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
+//MARK: - Search Bar
+        let searchBar = searchController.searchBar
+        searchBar.delegate = self
+        searchBar.placeholder = "Search Product"
+        searchBar.showsScopeBar = true
+        searchBar.scopeButtonTitles = ["Names", "Calories"]
+        searchBar.selectedScopeButtonIndex = 0
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.fileteredItems.count
+        return AppData2.fileteredItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        let data = AppData.fileteredItems[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell2", for: indexPath)
+        let data = AppData2.fileteredItems[indexPath.row]
         cell.textLabel?.text = data
 
         return cell
@@ -88,14 +98,29 @@ class MyTableVC2: UITableViewController {
 
 }
 
-extension MyTableVC2: UISearchResultsUpdating {
+extension MyTableVC3: UISearchResultsUpdating {
+    
     func updateSearchResults(for searchController: UISearchController) {
         if let text = searchController.searchBar.text {
             let search = text.trimmingCharacters(in: .whitespaces)
-            AppData.filterData(search: search)
+            AppData2.filterData(search: search)
             tableView.reloadData()
         }
     }
-    
-    
+}
+
+extension MyTableVC3: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        AppData2.selectedButton = selectedScope
+        
+        if selectedScope == 0 {
+            searchBar.placeholder = "Search Product"
+        } else {
+            searchBar.placeholder = "Maximum Calories"
+        }
+        
+        searchBar.text = ""
+        AppData2.filterData(search: "")
+        tableView.reloadData()
+    }
 }
