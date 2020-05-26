@@ -2,4 +2,6 @@
 
 ## Static Cells
 
-## Search Controller | Search Bar
+## Search Controller
+- Search Bar
+- Scope Bar
