@@ -40,7 +40,6 @@ class MyTableVC3: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return AppData2.fileteredItems.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell2", for: indexPath)
@@ -49,7 +48,6 @@ class MyTableVC3: UITableViewController {
 
         return cell
     }
-    
 
     /*
     // Override to support conditional editing of the table view.

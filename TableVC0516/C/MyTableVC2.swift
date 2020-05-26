@@ -40,7 +40,6 @@ class MyTableVC2: UITableViewController {
         return cell
     }
     
-
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -96,6 +95,4 @@ extension MyTableVC2: UISearchResultsUpdating {
             tableView.reloadData()
         }
     }
-    
-    
 }
